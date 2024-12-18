@@ -1,6 +1,7 @@
 ﻿open q01;
 open q02;
 open q03;
+open q04;
 open System
 
 let tasks = Map.ofList([
@@ -10,6 +11,8 @@ let tasks = Map.ofList([
     ("q02b", q02b)
     ("q03a", q03a)
     ("q03b", q03b)
+    ("q04a", q04a)
+    ("q04b", q04b)
 ])
 
 [<EntryPoint>]
