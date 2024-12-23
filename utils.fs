@@ -44,7 +44,13 @@ module Array2D =
                     |> Seq.map(fun columnNr -> grid[rowNr,columnNr])
                     |> List.ofSeq
         } |> List.ofSeq
-        
+
+    let inBounds  (grid : 'a[,]) (x,y) =
+        x >=0 && x < Array2D.length1 grid &&
+        y >=0 && y < Array2D.length2 grid
+let listAsString l =
+    l |> List.map string |> fun ss -> String.Join(", ", ss)
+
 let splitOnNewline (s: String) = s.Split(Environment.NewLine) |> Seq.ofArray
 let allPairs (items: 'a seq) =
     let list = List.ofSeq items
